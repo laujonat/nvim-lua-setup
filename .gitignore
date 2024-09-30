@@ -1,0 +1,16 @@
+# Ignore lazy.nvim installed plugins
+.local/share/nvim/lazy/
+site/
+undo/
+swap/
+session/
+
+# Backup and swap files
+*.swp
+*.swo
+*.bak
+*.tmp
+init.bak.*
+
+# In case vim-plugged configuration is still present
+plugged/
