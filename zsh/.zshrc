@@ -1,5 +1,6 @@
 # Used on Intel Macs
-
+# Disable default terminal control flow (interferes with vim mappings)
+stty -ixon
 # Autoload compinit and promptinit
 autoload -Uz compinit promptinit
 
@@ -19,7 +20,8 @@ if [[ -f ~/.zsh_private ]]; then
 fi
 
 # Update PATH
-export PATH="/usr/local/opt/binutils/bin:/usr/local/sbin:/usr/local/bin:$HOME/Library/pnpm:$PATH"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+
 
 export TERM=xterm
 
@@ -35,3 +37,14 @@ fpath=(${ASDF_DIR}/completions $fpath)
 compinit
 
 source $HOME/.zsh_personal
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+alias vim='neovide'
+

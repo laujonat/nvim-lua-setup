@@ -45,8 +45,8 @@ function sys_info() {
   echo -e "${nc} ${os} ${os_r} ${os_v} ${p_arch}"
 }
 
-alias ip='colored_ip'
-alias ifconfig='colored_ifconfig'
+# alias ip='colored_ip'
+# alias ifconfig='colored_ifconfig'
 alias edit_hosts='edit /etc/hosts' # edit_hosts: Edit /etc/hosts file
 alias sshd-logs='tail -f /var/log/auth.log' # tail ssh auth log
 

@@ -14,3 +14,10 @@ fonts/
 .netrwhist
 
 aliases/.aliases*
+
+zsh/.zsh_private
+
+*.bak
+
+nvim/.git
+kitty/kitty_search
