@@ -17,7 +17,7 @@ aliases/.aliases*
 
 zsh/.zsh_private
 
-*.bak
+**/*.bak*
 
 nvim/.git
 kitty/kitty_search
